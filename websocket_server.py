@@ -30,7 +30,14 @@ def calculate_angle(t_x,f_x,t_y,f_y):
     #idk bruh t_y stands for target y
     in_radians = math.atan2(t_y-f_y, t_x-f_x)
     degrees = math.degrees(in_radians)
-    return degrees
+
+    if degrees < 0 :
+        degrees = (180 + degrees) + 90
+    
+    else:
+        degrees = degrees - 90
+    
+    return degrees 
 
 
 
